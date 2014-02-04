@@ -1,0 +1,12 @@
+{
+  "name": "slideshare-viewer-html",
+  "version": "1.0.0",
+  "main": "slideshare-viewer-html.js",
+  "ignore": [
+    "README.md"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
