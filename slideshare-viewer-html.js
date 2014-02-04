@@ -12,7 +12,8 @@ var SlideShareViewer = function(url, element, options){
 	var presentation;
 
 	// Defined the callback function for the json response
-	window.slideShareJsonpCallback = function(obj){
+	var callbackName = "callback_" + Math.random().toString(36).substring(7);
+	window[callbackName] = function(obj){
 		if (obj.error === true) {
 			element.innerHTML = "<p>Error loading from SlideShare.net</p>";
 			return;
@@ -34,7 +35,7 @@ var SlideShareViewer = function(url, element, options){
 	// Starts loading data from SlideShare.net
 	var script = document.createElement('script');
 	script.type= "text/javascript";
-	script.src= "http://www.slideshare.net/api/oembed/2?url=" + url + "&format=json&callback=window.slideShareJsonpCallback";
+	script.src= "http://www.slideshare.net/api/oembed/2?url=" + url + "&format=json&callback=window." + callbackName;
 	document.getElementsByTagName('head')[0].appendChild(script);
 
 	// Defined the interface

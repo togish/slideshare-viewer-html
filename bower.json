@@ -5,6 +5,11 @@
   "ignore": [
     "README.md"
   ],
+  "keywords": [
+    "slideshare",
+    "html",
+    "viewer"
+  ],
   "dependencies": {
   },
   "devDependencies": {
