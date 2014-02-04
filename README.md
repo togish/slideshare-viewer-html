@@ -7,7 +7,7 @@ Viewer for presentations at SlideShare.net build with pure html and javascript.
 In this example a new viewer is build and next i called afterwards.
 ```js
 var slideshow = new SlideShareViewer(
-	"http://www.slideshare.net/tor2608/presentation-for-syncronization-test", 	// Url for the slideshow
+	"http://www.slideshare.net/tor2608/presentation-for-syncronization-test",
 	document.getElementById("slideshow"), 										
 	{
 		readyCallback: function(){
